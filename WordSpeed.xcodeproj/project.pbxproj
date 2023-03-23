@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B34284D829CC4E4F00D8738D /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34284D729CC4E4F00D8738D /* PickerViewController.swift */; };
 		B3CC67CF29C8565A00E95E00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC67CE29C8565A00E95E00 /* AppDelegate.swift */; };
 		B3CC67D129C8565A00E95E00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC67D029C8565A00E95E00 /* SceneDelegate.swift */; };
 		B3CC67D329C8565A00E95E00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC67D229C8565A00E95E00 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B34284D729CC4E4F00D8738D /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		B3CC67CB29C8565A00E95E00 /* WordSpeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordSpeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CC67CE29C8565A00E95E00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3CC67D029C8565A00E95E00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +85,6 @@
 		B3CC67C229C8565A00E95E00 = {
 			isa = PBXGroup;
 			children = (
-				B3F4EBA429C8FDF10023758F /* GameWordList.swift */,
 				B3CC67CD29C8565A00E95E00 /* WordSpeed */,
 				B3CC67E429C8565B00E95E00 /* WordSpeedTests */,
 				B3CC67EE29C8565B00E95E00 /* WordSpeedUITests */,
@@ -104,12 +105,14 @@
 		B3CC67CD29C8565A00E95E00 /* WordSpeed */ = {
 			isa = PBXGroup;
 			children = (
+				B3F4EBA429C8FDF10023758F /* GameWordList.swift */,
+				B3CC67D229C8565A00E95E00 /* ViewController.swift */,
+				B3F4EBA229C8F4620023758F /* GameViewController.swift */,
+				B3CC67D429C8565A00E95E00 /* Main.storyboard */,
+				B34284D729CC4E4F00D8738D /* PickerViewController.swift */,
+				B3CC67D729C8565B00E95E00 /* Assets.xcassets */,
 				B3CC67CE29C8565A00E95E00 /* AppDelegate.swift */,
 				B3CC67D029C8565A00E95E00 /* SceneDelegate.swift */,
-				B3CC67D229C8565A00E95E00 /* ViewController.swift */,
-				B3CC67D429C8565A00E95E00 /* Main.storyboard */,
-				B3F4EBA229C8F4620023758F /* GameViewController.swift */,
-				B3CC67D729C8565B00E95E00 /* Assets.xcassets */,
 				B3CC67D929C8565B00E95E00 /* LaunchScreen.storyboard */,
 				B3CC67DC29C8565B00E95E00 /* Info.plist */,
 			);
@@ -264,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B34284D829CC4E4F00D8738D /* PickerViewController.swift in Sources */,
 				B3F4EBA329C8F4620023758F /* GameViewController.swift in Sources */,
 				B3F4EBA529C8FDF10023758F /* GameWordList.swift in Sources */,
 				B3CC67D329C8565A00E95E00 /* ViewController.swift in Sources */,
