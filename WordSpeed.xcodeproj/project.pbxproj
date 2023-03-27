@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B335F3BE29D19A9C00FADDE4 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B335F3BD29D19A9C00FADDE4 /* ScoreViewController.swift */; };
+		B335F3C029D1B02600FADDE4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B335F3BF29D1B02600FADDE4 /* TableViewController.swift */; };
 		B34284D829CC4E4F00D8738D /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34284D729CC4E4F00D8738D /* PickerViewController.swift */; };
 		B34284DA29CC914700D8738D /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34284D929CC914700D8738D /* Toast.swift */; };
 		B3CC67CF29C8565A00E95E00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC67CE29C8565A00E95E00 /* AppDelegate.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B335F3BD29D19A9C00FADDE4 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		B335F3BF29D1B02600FADDE4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		B34284D729CC4E4F00D8738D /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		B34284D929CC914700D8738D /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		B3CC67CB29C8565A00E95E00 /* WordSpeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordSpeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +91,8 @@
 		B3CC67C229C8565A00E95E00 = {
 			isa = PBXGroup;
 			children = (
+				B335F3BF29D1B02600FADDE4 /* TableViewController.swift */,
+				B335F3BD29D19A9C00FADDE4 /* ScoreViewController.swift */,
 				B3CC67CD29C8565A00E95E00 /* WordSpeed */,
 				B3CC67E429C8565B00E95E00 /* WordSpeedTests */,
 				B3CC67EE29C8565B00E95E00 /* WordSpeedUITests */,
@@ -277,6 +283,8 @@
 				B3CC67CF29C8565A00E95E00 /* AppDelegate.swift in Sources */,
 				B3CC67D129C8565A00E95E00 /* SceneDelegate.swift in Sources */,
 				B34284DA29CC914700D8738D /* Toast.swift in Sources */,
+				B335F3C029D1B02600FADDE4 /* TableViewController.swift in Sources */,
+				B335F3BE29D19A9C00FADDE4 /* ScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

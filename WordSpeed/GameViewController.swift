@@ -8,7 +8,14 @@ class GameViewController: UIViewController {
         timer = Timer.scheduledTimer(withTimeInterval: 1 , repeats: true, block: {_ in self.TimerCounter()})
         CurrentWordLabel.text = GameWordList.choosenList.randomElement()
     }
-    var totalGameCounter = 60
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is ScoreViewController {
+            let sVc = segue.destination as? ScoreViewController
+            sVc?.score = score.formatted()
+        }
+    }
+    
+    var totalGameCounter = 3
     var counter = 10
     var timer: Timer?
     var score = 0
@@ -18,11 +25,8 @@ class GameViewController: UIViewController {
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 1 , repeats: true, block: {_ in self.TimerCounter()})
         resetScore()
-        
-       
-       
     }
-   
+    
     @IBOutlet weak var GameCounterLabel: UILabel!
    
     @IBOutlet weak var WWTExtField: UITextField!
@@ -35,7 +39,6 @@ class GameViewController: UIViewController {
     
     @IBAction func WriteWordTextField(_ sender: UITextField) {
        
-        
         checkWrongOrRight()
         WWTExtField.text = ""
         resetTimeAndWord()
@@ -50,9 +53,8 @@ class GameViewController: UIViewController {
         if totalGameCounter == 0 {
             showToast(message: "End Of Game ! ", font: .systemFont(ofSize: 17.0))
             timer?.invalidate()
+            performSegue(withIdentifier: "goToScoreBoard", sender: self)
         }
-        
-        
         counter -= 1
         GameTimer.text = counter.formatted()
         if counter == 0 {
@@ -64,9 +66,7 @@ class GameViewController: UIViewController {
                 checkWrongOrRight()
                 resetTimeAndWord()
                 showToast(message: "Times Up! ", font: .systemFont(ofSize: 17.0))
-                
-                
-            }
+                }
         }
         if counter <= 5 {
             GameTimer.textColor = .red
@@ -83,7 +83,7 @@ class GameViewController: UIViewController {
     }
     func checkWrongOrRight() {
         if totalGameCounter == 0 {
-            return 
+            return
         }
         if (CurrentWordLabel.text == WWTExtField.text) {
             CurrentWordLabel.text = GameWordList.choosenList.randomElement()
