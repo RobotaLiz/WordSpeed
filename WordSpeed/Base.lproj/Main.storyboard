@@ -68,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aDw-YO-RRb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-585.49618320610682" y="321.83098591549299"/>
+            <point key="canvasLocation" x="-703" y="-9"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -151,7 +151,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="w" translatesAutoresizingMaskIntoConstraints="NO" id="khg-oc-D2d">
-                                <rect key="frame" x="2" y="231" width="391" height="325"/>
+                                <rect key="frame" x="2" y="247" width="391" height="325"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="325" id="6sV-54-1C3"/>
                                 </constraints>
@@ -167,13 +167,13 @@
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="shadowColor" systemColor="labelColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wy0-P7-hGP">
-                                <rect key="frame" x="41" y="639" width="311" height="79"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wy0-P7-hGP">
+                                <rect key="frame" x="41" y="167" width="312" height="79"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Your Scores!">
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" size="54" name="Cochin"/>
+                                            <font key="NSFont" size="41" name="Cochin"/>
                                             <font key="NSOriginalFont" size="51" name="Webdings"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -213,6 +213,33 @@
                                     <segue destination="hDc-xf-tic" kind="show" id="iA1-D0-0LT"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NeA-hs-u5C">
+                                <rect key="frame" x="100" y="651" width="212" height="34"/>
+                                <color key="backgroundColor" red="0.96768933530000001" green="0.86353170869999996" blue="0.71582978959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCY-Be-9CV">
+                                <rect key="frame" x="100" y="700" width="212" height="36"/>
+                                <color key="backgroundColor" red="0.96768933530000001" green="0.86353170869999996" blue="0.71582978959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Save Score">
+                                            <attributes>
+                                                <font key="NSFont" size="21" name="Chalkboard"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="SaveScoreButton:" destination="xMX-rJ-vcp" eventType="touchUpInside" id="PQV-Xm-sem"/>
+                                    <segue destination="hDc-xf-tic" kind="show" id="oR9-dr-agJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MfE-xH-9w8"/>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.80000000000000004" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -223,20 +250,27 @@
                             <constraint firstItem="khg-oc-D2d" firstAttribute="leading" secondItem="MfE-xH-9w8" secondAttribute="leading" constant="2" id="AUb-IO-n1W"/>
                             <constraint firstItem="X5m-TS-v69" firstAttribute="centerY" secondItem="hit-dK-tsB" secondAttribute="centerY" id="Dwt-MI-87J"/>
                             <constraint firstItem="khg-oc-D2d" firstAttribute="centerX" secondItem="477-1n-qSa" secondAttribute="centerX" constant="1" id="FfP-fA-xDK"/>
+                            <constraint firstItem="NeA-hs-u5C" firstAttribute="top" secondItem="khg-oc-D2d" secondAttribute="bottom" constant="79" id="HUd-JL-JIK"/>
+                            <constraint firstItem="NeA-hs-u5C" firstAttribute="leading" secondItem="fCY-Be-9CV" secondAttribute="leading" id="LWT-49-NIh"/>
                             <constraint firstItem="hit-dK-tsB" firstAttribute="top" secondItem="MfE-xH-9w8" secondAttribute="top" constant="34" id="M0l-2A-riA"/>
                             <constraint firstItem="hit-dK-tsB" firstAttribute="leading" secondItem="477-1n-qSa" secondAttribute="leadingMargin" id="Q0A-i2-LSL"/>
                             <constraint firstItem="MfE-xH-9w8" firstAttribute="trailing" secondItem="X5m-TS-v69" secondAttribute="trailing" constant="27" id="QWU-pc-0a4"/>
-                            <constraint firstItem="MfE-xH-9w8" firstAttribute="bottom" secondItem="wy0-P7-hGP" secondAttribute="bottom" constant="51" id="XaL-ju-LRR"/>
+                            <constraint firstItem="NeA-hs-u5C" firstAttribute="trailing" secondItem="fCY-Be-9CV" secondAttribute="trailing" id="ThM-dE-nqt"/>
+                            <constraint firstItem="fCY-Be-9CV" firstAttribute="top" secondItem="NeA-hs-u5C" secondAttribute="bottom" constant="15" id="VSY-GU-3ck"/>
+                            <constraint firstItem="MfE-xH-9w8" firstAttribute="trailing" secondItem="NeA-hs-u5C" secondAttribute="trailing" constant="81" id="VZW-7l-SFc"/>
+                            <constraint firstItem="MfE-xH-9w8" firstAttribute="bottom" secondItem="wy0-P7-hGP" secondAttribute="bottom" constant="523" id="XaL-ju-LRR"/>
                             <constraint firstItem="wy0-P7-hGP" firstAttribute="leading" secondItem="MfE-xH-9w8" secondAttribute="leading" constant="41" id="cpy-bM-87a"/>
                             <constraint firstItem="G8f-eJ-Ijo" firstAttribute="leading" secondItem="MfE-xH-9w8" secondAttribute="leading" constant="174" id="kVV-Ev-LGh"/>
-                            <constraint firstItem="wy0-P7-hGP" firstAttribute="top" secondItem="khg-oc-D2d" secondAttribute="bottom" constant="83" id="lv9-GX-IMF"/>
-                            <constraint firstItem="khg-oc-D2d" firstAttribute="top" secondItem="MfE-xH-9w8" secondAttribute="top" constant="172" id="rAa-hb-yI6"/>
+                            <constraint firstItem="NeA-hs-u5C" firstAttribute="leading" secondItem="MfE-xH-9w8" secondAttribute="leading" constant="100" id="lZT-ey-JM4"/>
+                            <constraint firstItem="wy0-P7-hGP" firstAttribute="top" secondItem="khg-oc-D2d" secondAttribute="bottom" constant="-405" id="lv9-GX-IMF"/>
+                            <constraint firstItem="khg-oc-D2d" firstAttribute="top" secondItem="MfE-xH-9w8" secondAttribute="top" constant="188" id="rAa-hb-yI6"/>
                             <constraint firstAttribute="bottom" secondItem="G8f-eJ-Ijo" secondAttribute="bottom" constant="498" id="rKQ-eB-5iT"/>
                             <constraint firstItem="G8f-eJ-Ijo" firstAttribute="centerX" secondItem="khg-oc-D2d" secondAttribute="centerX" constant="-0.5" id="xN2-l0-x3J"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CMu-nC-VtY"/>
                     <connections>
+                        <outlet property="AddNameTextView" destination="NeA-hs-u5C" id="Nbt-jf-7nm"/>
                         <outlet property="ScoreBoredLabel" destination="G8f-eJ-Ijo" id="mkh-Mx-0pe"/>
                     </connections>
                 </viewController>
@@ -247,7 +281,6 @@
         <!--Table View Controller-->
         <scene sceneID="d5x-wp-7Rp">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FUv-8n-mgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="hDc-xf-tic" customClass="TableViewController" customModule="WordSpeed" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="1UW-Lc-fJ3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -294,8 +327,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="rsf-wU-qdS"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FUv-8n-mgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2351" y="-175"/>
+            <point key="canvasLocation" x="2408" y="-18"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="bg8-bp-jrW">
@@ -322,7 +356,7 @@
                                 <color key="backgroundColor" red="0.70980392160000005" green="0.60392156860000001" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <rect key="contentStretch" x="0.55000000000000004" y="0.0" width="1" height="1"/>
-                                <color key="textColor" red="0.70980392160000005" green="0.60392156860000001" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" smartInsertDeleteType="no"/>
                                 <connections>
@@ -453,10 +487,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zAM-uI-KWx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="901.52671755725191" y="-136.61971830985917"/>
+            <point key="canvasLocation" x="895" y="-27"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="iA1-D0-0LT"/>
         <segue reference="UiK-tB-Ohv"/>
     </inferredMetricsTieBreakers>
     <resources>

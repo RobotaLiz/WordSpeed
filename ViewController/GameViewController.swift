@@ -11,22 +11,22 @@ class GameViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is ScoreViewController {
             let sVc = segue.destination as? ScoreViewController
-            sVc?.score = score.formatted()
+            sVc?.score = score
         }
     }
-    
-    var totalGameCounter = 3
+    var totalGameCounter = 60
     var counter = 10
     var timer: Timer?
     var score = 0
     
     @IBAction func ResetGameButton(_ sender: Any) {
-        resetTimeAndWord()
+        resetTimeAndWordForRound()
+        totalGameCounter = 60
+        GameCounterLabel.text = totalGameCounter.formatted()
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 1 , repeats: true, block: {_ in self.TimerCounter()})
         resetScore()
     }
-    
     @IBOutlet weak var GameCounterLabel: UILabel!
    
     @IBOutlet weak var WWTExtField: UITextField!
@@ -41,10 +41,9 @@ class GameViewController: UIViewController {
        
         checkWrongOrRight()
         WWTExtField.text = ""
-        resetTimeAndWord()
+        resetTimeAndWordForRound()
     }
     @IBOutlet weak var CurrentWordLabel: UILabel!
-    
     func TimerCounter () {
     
         totalGameCounter -= 1
@@ -54,6 +53,7 @@ class GameViewController: UIViewController {
             showToast(message: "End Of Game ! ", font: .systemFont(ofSize: 17.0))
             timer?.invalidate()
             performSegue(withIdentifier: "goToScoreBoard", sender: self)
+            return
         }
         counter -= 1
         GameTimer.text = counter.formatted()
@@ -64,7 +64,7 @@ class GameViewController: UIViewController {
                 timer?.invalidate()
             }else{
                 checkWrongOrRight()
-                resetTimeAndWord()
+                resetTimeAndWordForRound()
                 showToast(message: "Times Up! ", font: .systemFont(ofSize: 17.0))
                 }
         }
@@ -74,7 +74,7 @@ class GameViewController: UIViewController {
             GameTimer.textColor = .white
         }
     }
-    func resetTimeAndWord () {
+    func resetTimeAndWordForRound () {
         GameTimer.text = "10"
         GameTimer.textColor = .white
         CurrentWordLabel.text = GameWordList.choosenList.randomElement()
@@ -99,11 +99,7 @@ class GameViewController: UIViewController {
         
     }
     func resetScore () {
-       score = 0
+        score = 0
         ScoreLabel.text = score.formatted()
     }
-    func countdownTimerForTheWholeGame () {
-       
-    }
 }
-

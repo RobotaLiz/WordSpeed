@@ -25,9 +25,7 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         }else{
             return "Hard"
         }
-        
     }
-    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if row == 0 {
             GameWordList.choosenList = GameWordList.Easy
@@ -37,7 +35,4 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             GameWordList.choosenList = GameWordList.Hard
         }
     }
-
-  
-
 }

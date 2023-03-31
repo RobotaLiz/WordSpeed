@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B323743229D63280009161B3 /* ScoreEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B323743129D63280009161B3 /* ScoreEntry.swift */; };
 		B335F3BE29D19A9C00FADDE4 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B335F3BD29D19A9C00FADDE4 /* ScoreViewController.swift */; };
 		B335F3C029D1B02600FADDE4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B335F3BF29D1B02600FADDE4 /* TableViewController.swift */; };
 		B34284D829CC4E4F00D8738D /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34284D729CC4E4F00D8738D /* PickerViewController.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B323743129D63280009161B3 /* ScoreEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreEntry.swift; sourceTree = "<group>"; };
 		B335F3BD29D19A9C00FADDE4 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		B335F3BF29D1B02600FADDE4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		B34284D729CC4E4F00D8738D /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
@@ -88,9 +90,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B323742F29D4177B009161B3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B3F4EBA229C8F4620023758F /* GameViewController.swift */,
+				B3CC67D229C8565A00E95E00 /* ViewController.swift */,
+				B34284D729CC4E4F00D8738D /* PickerViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B323743029D63246009161B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B3F4EBA429C8FDF10023758F /* GameWordList.swift */,
+				B323743129D63280009161B3 /* ScoreEntry.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B3CC67C229C8565A00E95E00 = {
 			isa = PBXGroup;
 			children = (
+				B323743029D63246009161B3 /* Model */,
+				B323742F29D4177B009161B3 /* ViewController */,
 				B335F3BF29D1B02600FADDE4 /* TableViewController.swift */,
 				B335F3BD29D19A9C00FADDE4 /* ScoreViewController.swift */,
 				B3CC67CD29C8565A00E95E00 /* WordSpeed */,
@@ -113,12 +136,8 @@
 		B3CC67CD29C8565A00E95E00 /* WordSpeed */ = {
 			isa = PBXGroup;
 			children = (
-				B3F4EBA429C8FDF10023758F /* GameWordList.swift */,
-				B3CC67D229C8565A00E95E00 /* ViewController.swift */,
-				B3F4EBA229C8F4620023758F /* GameViewController.swift */,
 				B34284D929CC914700D8738D /* Toast.swift */,
 				B3CC67D429C8565A00E95E00 /* Main.storyboard */,
-				B34284D729CC4E4F00D8738D /* PickerViewController.swift */,
 				B3CC67D729C8565B00E95E00 /* Assets.xcassets */,
 				B3CC67CE29C8565A00E95E00 /* AppDelegate.swift */,
 				B3CC67D029C8565A00E95E00 /* SceneDelegate.swift */,
@@ -281,6 +300,7 @@
 				B3F4EBA529C8FDF10023758F /* GameWordList.swift in Sources */,
 				B3CC67D329C8565A00E95E00 /* ViewController.swift in Sources */,
 				B3CC67CF29C8565A00E95E00 /* AppDelegate.swift in Sources */,
+				B323743229D63280009161B3 /* ScoreEntry.swift in Sources */,
 				B3CC67D129C8565A00E95E00 /* SceneDelegate.swift in Sources */,
 				B34284DA29CC914700D8738D /* Toast.swift in Sources */,
 				B335F3C029D1B02600FADDE4 /* TableViewController.swift in Sources */,
